@@ -1,7 +1,6 @@
 import streamlit as st
 
 from algorithm.commands.autoCleanerB import DataCleaner
-
 def streamlit_interface():
     st.title("Data Cleaner")
     

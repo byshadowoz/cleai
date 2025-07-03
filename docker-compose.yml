@@ -1,0 +1,16 @@
+services:
+  cleai-app:
+    build: .
+    container_name: cleai-cont
+    volumes:
+      - ./algorithm:/src/algorithm
+      - ./bot:/src/bot
+      - ./src:/src
+    environment:
+      - PYTHONPATH=/src
+    deploy:
+      resources:
+        limits:
+          memory: 8g
+    ports:
+      - "8000:8000"
